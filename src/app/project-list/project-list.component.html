@@ -1,0 +1,48 @@
+<div class="container-fluid">
+  <div class="overlay-mask" @flyInOut></div>
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <div class="spinner-load" *ngIf="isLoading; else list" style="color: white;">
+        <div class="lds-ring">
+          <div class="loading">{{'ProjectList.Loading'|translate}}</div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <ng-template #list>
+        <div>
+          <div class="col-md-12 ml-0 mr-0 mt-3 p-0">
+            <div class="nav-container">
+              <app-search (pipeEvent)="getSearchString($event)"></app-search>
+              <div class="dropdown">
+                <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  <i class="fas fa-sort-numeric-{{sortState}}"></i>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                  <button class="dropdown-item" type="button" (click)="sortProjects('up')" [ngClass]="{highlited: sortState ==='up' }"><i
+                      class="fas fa-sort-numeric-up">
+                      {{'ProjectList.Sort.High'|translate}}</i></button>
+                  <button class="dropdown-item" type="button" (click)="sortProjects('down')" [ngClass]="{highlited: sortState ==='down' }"><i
+                      class="fas fa-sort-numeric-down">
+                      {{'ProjectList.Sort.Low'|translate}}</i></button>
+                </div>
+              </div>
+              <button *ngIf="isAuth; else noAuth" routerLink="addProject" class="btn btn-secondary">{{'ProjectList.AddButton'|
+                translate}}</button>
+              <ng-template #noAuth>
+                <button ngbPopover="Please Login for add project" placement="left" class="btn btn-secondary">{{'ProjectList.AddButton'|
+                  translate}}</button>
+              </ng-template>
+            </div>
+          </div>
+        </div>
+        <div class="items-container">
+          <app-project-item *ngFor="let project of projectList|searchByName:searchStr" [project]="project"></app-project-item>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</div>

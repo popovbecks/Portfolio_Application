@@ -1,0 +1,9 @@
+<div class="container-search">
+  <div class="searchInput" @flyIn>
+    <div class="search-container">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="{{'Search'|translate}}" [(ngModel)]="searchStr" (input)="sendEvent()">
+      </div>
+    </div>
+  </div>
+</div>

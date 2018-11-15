@@ -1,0 +1,9 @@
+.component-wrapper {
+  height: -webkit-calc(100% - 87px);
+  overflow-y: auto;
+}
+
+.under {
+  width: 100%;
+  height: 55px;
+}

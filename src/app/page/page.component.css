@@ -1,0 +1,81 @@
+.content {
+  min-height: 87vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 2;
+}
+
+.name h1 {
+  font-size: 6rem;
+  color: #596971;
+}
+
+.position {
+  background: gray;
+  opacity: 0.7;
+  color: yellow;
+  padding-left: 7px;
+}
+
+h2 {
+  z-index: 2;
+}
+
+.see {
+  align-self: flex-end;
+  padding: 0;
+  margin-left: 7px;
+  font-size: 15px;
+  cursor: pointer;
+  color: white;
+}
+
+.see:hover {
+  color: lightgoldenrodyellow;
+}
+
+.yellow {
+  color: yellow;
+}
+
+@media screen and (max-width: 525px) {
+  h1 {
+    font-size: 2rem !important;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  h1 {
+    font-size: 2.2rem !important;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  h1 {
+    font-size: 2rem !important;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+}

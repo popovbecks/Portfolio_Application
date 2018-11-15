@@ -1,0 +1,25 @@
+.content {
+  min-height: 87vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 2;
+}
+
+.content h2 {
+  color: yellow;
+  font-size: 4rem;
+}
+
+@media screen and (max-width: 768px) {
+  .content h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .content h2 {
+    font-size: 1.5rem;
+  }
+}

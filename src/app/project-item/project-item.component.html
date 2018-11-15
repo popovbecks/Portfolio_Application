@@ -1,0 +1,34 @@
+<div class="card" style="height: 22rem;">
+  <img class="card-img-top" src="{{project.imgLink}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{project.title}}</h5>
+    <p class="card-text">{{project.description | bcEllipsis}}</p>
+  </div>
+  <div class="mask"></div>
+  <div class="button" (click)="onSelect(project)"><a> {{'ProjectItem.MoreButton'|translate}} </a></div>
+  <div class="func-buttons" *ngIf="authenticated; else notAuthBlock">
+    <div class="edit-func-btn" (click)="onEdit(project)"><i class="fas fa-edit"></i></div>
+    <div class="delete-func-btn" (click)="openLg(content)"><i class="fas fa-trash-alt"></i></div>
+  </div>
+</div>
+<ng-template #notAuthBlock>
+  <div class="func-buttons">
+    <div class="noAuth" placement="right" ngbPopover="Please Login for update project"><i class="fas fa-edit"></i></div>
+    <div class="noAuth" placement="right" ngbPopover="Please Login for delete project"><i class="fas fa-trash-alt"></i></div>
+  </div>
+</ng-template>
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">{{'ProjectItem.Confirm'|translate}} </h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>{{'ProjectItem.Message'|translate}} <strong>{{project.title}}</strong>?</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-danger" (click)="c('Close click')" (click)="onDelete(project.$key, project)">{{'ProjectItem.Yes'|translate}}</button>
+    <button type="button" class="btn btn-light" (click)="c('Close click')">{{'ProjectItem.No'|translate}}</button>
+  </div>
+</ng-template>

@@ -1,0 +1,23 @@
+<div class="container-fluid">
+  <div class="overlay-mask" @flyFromTop></div>
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <div class="cards" @flyInOut>
+        <div class="card-cont" *ngFor="let skill of sillsList">
+          <div class="card-item">
+            <div class="front">
+              <img class="card-img-top img-responsive img-thumbnail crossRotate" src="{{skill.url}}" alt="Card image cap">
+            </div>
+            <div class="back">
+              <div class="card" style="width: 19rem;">
+                <h4 class="card-title" style="text-align: center;">
+                  <strong>{{skill.title}}</strong>
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

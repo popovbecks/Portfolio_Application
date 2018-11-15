@@ -1,0 +1,61 @@
+{
+  "Navigation": {
+    "Home": "Home",
+    "MyProjects": "My Projects",
+    "About": "About Me",
+    "Skills": "My Skills",
+    "Login": "Login",
+    "Logout": "Logout",
+    "Guest": "Guest"
+  },
+  "ProjectItem": {
+    "MoreButton": "SEE MORE",
+    "Message": "Are you really want to delete project",
+    "Yes": "Yes",
+    "No": "No",
+    "Confirm": "Confirmation of delete"
+  },
+  "ProjectList": {
+    "AddButton": "Add",
+    "Loading": "Loading...",
+    "Sort": {
+      "High": "From higher rate",
+      "Low": "From lower rate"
+    }
+
+  },
+  "Search": "Search..",
+  "ProjectDetail": {
+    "Title": "Project {{title}} detail",
+    "Year": "Year {{year}}",
+    "GitButton": "GitHub"
+  },
+  "AboutMe": "About Me",
+  "Admin": {
+    "TitleUpdate": "Form form for update project {{value.title}}",
+    "TitleAdd": "Form for add project",
+    "FormTitle": "Title",
+    "FormYear": "Year",
+    "FormRepo": "Link for repository",
+    "FormImg": "Image URL",
+    "FormDescription": "Description",
+    "FormSubmit": "SUBMIT",
+    "FormCancel": "CANCEL",
+    "PlaceTitle": "Enter a title",
+    "PlaceYear": "Enter year of create",
+    "PlaceRepo": "Enter link for repository",
+    "PlaceImg": "Enter image URL",
+    "PlaceDescription": "Enter description"
+
+  },
+  "Language": "Language",
+  "Valid": {
+    "Title": "You should enter title of project",
+    "Year": "You should enter year of create",
+    "Repo": "You should enter link for repository",
+    "Img": "You should enter image url",
+    "Desc": "You must specify a description at least 30 characters."
+  },
+  "Footer": "Lorem ipsum. All rights reserved"
+
+}

@@ -1,0 +1,65 @@
+.digit {
+  color: yellow;
+}
+
+.en {
+  background-image: url('https://www.flaginstitute.org/wp/wp-content/uploads/2012/10/UK-Union-Flag.png');
+  background-size: 30px 25px;
+  padding: 0;
+  margin: 0;
+}
+
+.ru {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Russia.svg/640px-Flag_of_Russia.svg.png');
+  display: inline-block;
+  background-size: cover;
+}
+
+.en,
+.ru {
+  height: 25px;
+  width: 30px;
+  display: block;
+  float: left;
+  margin-right: 5px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.log {
+  color: white;
+}
+
+.log a {
+  font-size: 10px;
+}
+
+.name {
+  font-size: 8px;
+}
+
+.dropdown-menu {
+  padding: 0;
+  min-width: inherit;
+}
+
+.dropdown-item {
+  width: inherit;
+  padding: 5px 26px 5px 5px;
+}
+
+/* highlight current menu item */
+.highlited {
+  background-color: rgba(0, 0, 0, .3)
+}
+
+.btn {
+  padding: 0;
+}
+
+.btn-secondary {
+  background-color: #343A40;
+  border-color: transparent;
+}

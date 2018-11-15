@@ -1,0 +1,56 @@
+<div class="container-fluid">
+  <div class="overlay-mask"></div>
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <div class="row justify-content-center">
+        <div class="col-md-12">
+          <div *ngIf="projectForm">
+            <h4 *ngIf="projectForm.value.$key!==null&&projectForm.value.$key!==undefined; else add">{{'Admin.TitleUpdate'|translate:projectForm}}</h4>
+          </div>
+          <ng-template #add>
+            <h4>{{'Admin.TitleAdd'|translate}}</h4>
+          </ng-template>
+          <div class="form">
+            <form [formGroup]="projectForm" (ngSubmit)="onSubmit(projectForm)">
+              <input type="hidden" formControlName="$key" [(ngModel)]="getService().selectedProject.$key">
+              <div class="form-group">
+                <label>{{'Admin.FormTitle'|translate}}</label>
+                <input class="form-control" formControlName="title" [(ngModel)]="getService().selectedProject.title"
+                  placeholder="{{'Admin.PlaceTitle'|translate}}">
+                <div class="alert" *ngIf="!projectForm.controls['title'].valid && projectForm.controls['title'].touched">{{'Valid.Title'|translate}}</div>
+              </div>
+              <div class="form-group">
+                <label>{{'Admin.FormYear'|translate}}</label>
+                <input class="form-control" type="number" formControlName='year' [(ngModel)]="getService().selectedProject.year"
+                  placeholder="{{'Admin.PlaceYear'|translate}}">
+                <div class="alert" *ngIf="!projectForm.controls['year'].valid && projectForm.controls['year'].touched">{{'Valid.Year'|translate}}</div>
+              </div>
+              <div class="form-group">
+                <label>{{'Admin.FormRepo'|translate}}</label>
+                <input class="form-control" formControlName='gitLink' [(ngModel)]="getService().selectedProject.gitLink"
+                  placeholder="{{'Admin.PlaceRepo'|translate}}">
+                <div class="alert" *ngIf="!projectForm.controls['gitLink'].valid && projectForm.controls['gitLink'].touched">{{'Valid.Repo'|translate}}</div>
+              </div>
+              <div class="form-group">
+                <label>{{'Admin.FormImg'|translate}}</label>
+                <input class="form-control" formControlName='imgLink' [(ngModel)]="getService().selectedProject.imgLink"
+                  placeholder="{{'Admin.PlaceImg'|translate}}">
+                <div class="alert" *ngIf="!projectForm.controls['imgLink'].valid && projectForm.controls['imgLink'].touched">{{'Valid.Img'|translate}}</div>
+              </div>
+              <div class="form-group">
+                <label>{{'Admin.FormDescription'|translate}}</label>
+                <textarea class="form-control" formControlName='description' [(ngModel)]="getService().selectedProject.description"
+                  placeholder="{{'Admin.PlaceDescription'|translate}}"></textarea>
+                <div class="alert" *ngIf="!projectForm.controls['description'].valid && projectForm.controls['description'].touched">{{'Valid.Desc'|translate}}</div>
+              </div>
+              <div class="form-group">
+                <button class="btn btn-warning" type="submit" [disabled]="!projectForm.valid">{{'Admin.FormSubmit'|translate}}</button>
+                <button (click)="goBack(projectForm)" class="btn btn-default cancel">{{'Admin.FormCancel'|translate}}</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

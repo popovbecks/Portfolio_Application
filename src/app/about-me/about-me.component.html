@@ -1,0 +1,41 @@
+<div class="wrap">
+  <div class="overlay-mask" @flyFromBottom></div>
+  <div class="container-fluid">
+    <div class="row d">
+      <div class="col-md-8 offset-md-2">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="about">
+              <div class="about-container">
+                <div @flyInOut>
+                  <img class="about-img img-responsive" src="https://i.imgur.com/Xvslo4L.jpg" alt="author">
+                </div>
+                <div class="about-info" @flyIn>
+                  <h3>{{'AboutMe'|translate}}</h3>
+                  <div class="about-text">
+                    <p>Lorem ipsum dolor Lorem ipsum. All rights reserved Lorem ipsum. All rights reserved Lorem ipsum.
+                      All
+                      rights reserved Lorem ipsum. All rights reserved orem ipsum dolor Lorem ipsum. All rights
+                      reserved
+                      Lorem ipsum. All rights reserved Lorem ipsum. All rights reserved Lorem ipsum. All rights
+                      reserved
+                      orem ipsum dolor Lorem ipsum. All rights reserved Lorem ipsum. All rights reserved Lorem ipsum.
+                      All
+                      rights reserved Lorem ipsum. All rights reserved</p>
+                  </div>
+                  <div class="about-socials">
+                    <button type="button" class="btn btn-primary" (click)="redirectTo('https://www.facebook.com/popovbecks')">
+                      <i class="fab fa-facebook-f"></i> Facebook</button>
+                    <button type="button" class="btn btn-primary" (click)="redirectTo('https://www.linkedin.com/in/aleksey-popov-b0b221113/')">
+                      <i class="fab fa-linkedin"></i> LinkedIn</button>
+                    <button type="button" class="btn btn-default" (click)="redirectTo('https://www.github.com/popovbecks')">
+                      <i class="fab fa-github"></i> GitHub</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

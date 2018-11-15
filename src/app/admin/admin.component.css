@@ -1,0 +1,70 @@
+.card {
+  margin-bottom: 20px;
+}
+
+.edit_button {
+  margin-right: 20px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.projects-container {
+  height: 69vh;
+  overflow-y: auto;
+  margin-top: 30px;
+  overflow-x: hidden;
+}
+
+.form {
+  margin-top: 20px;
+  background: rgba(194, 199, 204, 0.65) none no-repeat scroll 0px 0px !important;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+h4 {
+  color: #FFFFFF;
+  border-radius: 6px;
+  padding: 5px;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 36px;
+}
+
+.cancel {
+  margin-left: 5px;
+  background: rgba(194, 199, 204, 0.95) none no-repeat scroll 0px 0px !important;
+}
+
+.alert {
+  padding: 7px 0 0 0;
+  font-size: .9em;
+  display: inline-block;
+  animation: 2s alertAnim forwards;
+  margin: 0;
+  color: darkred;
+}
+
+.ng-invalid:not(form) {
+  border: 2px solid #a94442;
+  /* red */
+}
+
+.ng-untouched:not(form) {
+  border: 1px solid greenyellow;
+}
+
+@keyframes alertAnim {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

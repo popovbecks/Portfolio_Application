@@ -1,0 +1,21 @@
+.copyright p {
+  margin: 0;
+  padding: 5px 0;
+  color: #EEEEEE;
+}
+
+nav {
+  background-color: #343A40;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.col-md-10 {
+  padding-left: 0;
+}

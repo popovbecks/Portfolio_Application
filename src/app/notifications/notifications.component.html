@@ -1,0 +1,25 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <h1>Notifications</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4 offset-md-4 mb-2">
+      <input type="text" class="form-control" [(ngModel)]="searchString" placeholder="Search by user name">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 offset-md-2 mb-3">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item" *ngFor="let note of notes | searchByName : searchString">User <span class="bage badge-info p-1">{{note.author}}</span>
+          (email:
+          {{note.email}})
+          {{note.action}}
+          <span class="bage badge-success p-1">{{note.title}}</span>
+          on {{note.date
+          | date:'fullDate'}}</li>
+      </ul>
+    </div>
+  </div>
+</div>
